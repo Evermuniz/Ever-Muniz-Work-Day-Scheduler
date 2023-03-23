@@ -5,8 +5,8 @@
 
 $(function () {
   $('.saveBtn').on('click', function (){
-    var id = $(this).parent().attr('id');
-    var contents = $(this).siblings('textarea').val();
+    var id = $(this).parent().attr("id");
+    var contents = $(this).siblings("textarea").val();
     localStorage.setItem(id, JSON.stringify(contents));
   })
 
@@ -20,9 +20,10 @@ $(function () {
   if (currentTime === timeBlock) {$(this).addClass("present");}
   if (currentTime < timeBlock) {$(this).addClass("future");}
 
+  var description = $(this).children("textarea");
+  var storedData = JSON.parse(localStorage.getItem(timeBlock));
+  description.text(storedData);
   })
-
-  
 
  
 });
