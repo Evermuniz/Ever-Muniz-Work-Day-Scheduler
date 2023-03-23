@@ -1,17 +1,14 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-var save = document.querySelector("saveBtn")
+var save = $('.saveBtn')
 
 
 $(function () {
-  save.addEventListener('click', function (){
-    var timeblock = {
-      hour: this.id,
-      content: this.content
-    }
-
-
+  save.on('click', function (){
+    var id = $(this).parent().attr('id');
+    var contents = $(this).siblings('textarea').val();
+    localStorage.setItem(id, JSON.stringify(contents));
 
   })
 
