@@ -10,11 +10,21 @@ $(function () {
     localStorage.setItem(id, JSON.stringify(contents));
   })
 
-  var currentTime = dayjs().format('HH')
-  var timeBlock = $('.time-block').attr('id');
+  var currentTime = dayjs().format("HH");
   console.log(currentTime);
+
+  $('.time-block').each(function() {
+  var timeBlock = $(this).attr("id");
   console.log(timeBlock);
-  if (currentTime < timeBlock) {$('.time-block').addClass("past");}
+  if (currentTime > timeBlock) {$(this).addClass("past");}
+  if (currentTime === timeBlock) {$(this).addClass("present");}
+  if (currentTime < timeBlock) {$(this).addClass("future");}
+
+  })
+
+  
+
+ 
 });
 
 
