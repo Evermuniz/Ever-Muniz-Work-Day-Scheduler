@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Noting the bootstrap library link used throughout this document-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
     />
+    <!--Noting the fontawesome api link-->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!--Noting the google fonts api link-->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
@@ -30,10 +33,12 @@
     </header>
     <div class="container-lg px-5">
 
-      <div id="09" class="row time-block">
-        <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
+      <div id="09" class="row time-block"> <!--I kept the div code and modified it to be dynamic. i.e., instead of the id value being "hour-9", I changed it to 09.
+      This helps in the js code when I'm referencing the current time to decide which class to apply. I also removed the past, present, and future classes. 
+      As explained in the js script, those classes are added depending on what time it currently is-->
+        <div class="col-2 col-md-1 hour text-center py-3">9AM</div> <!--Just noting that this webpage uses bootstrap for positioning-->
         <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
-        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+        <button class="btn saveBtn col-2 col-md-1" aria-label="save"> <!--I used the "saveBtn" class in js to select all save buttons-->
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
       </div>
@@ -94,8 +99,9 @@
         </button>
       </div>
 
-       <div id="17" class="row time-block">
-        <div class="col-2 col-md-1 hour text-center py-3">5PM</div>
+       <div id="17" class="row time-block"> <!--Worth noting that the id is in military time for easy comparison to current time used in js which is in the same format-->
+        <div class="col-2 col-md-1 hour text-center py-3">5PM</div> <!--I copied and pasted the same div for 9 hours total to resemble mock up.
+        The only things I changed in each div were the id and div text displaying the respective time slot -->
         <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
         <button class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
@@ -103,7 +109,7 @@
       </div>
 
       
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> <!--Noting that here is our jquery library link and below is the day.js library link-->
     <script
       src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
       integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
