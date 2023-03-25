@@ -1,10 +1,6 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
 
 $(function () {
-  var currentDate = dayjs().format('MMM D, YYYY'); //declaring a variable with today's date using dayjs
+  var currentDate = dayjs().format('dddd, MMMM D, YYYY'); //declaring a variable with today's date using dayjs
   $('#currentDay').text(currentDate); //using jquery to select the p element in HTML with #currentDay id and setting text content to display today's date
 
   $('.saveBtn').on('click', function (){ //using jquery to select all save buttons in HTML and trigger this function when they are clicked
