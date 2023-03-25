@@ -4,6 +4,10 @@
 
 
 $(function () {
+  var currentDate = dayjs().format('MMM D, YYYY');
+  $('#currentDay').text(currentDate);
+
+
   $('.saveBtn').on('click', function (){
     var id = $(this).parent().attr("id");
     var contents = $(this).siblings("textarea").val();
