@@ -27,7 +27,7 @@ $(function () {
   var description = $(this).children("textarea");
   var storedData = JSON.parse(localStorage.getItem(timeBlock));
   description.text(storedData);
-  })
+  });
 
  
 });
